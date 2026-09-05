@@ -121,7 +121,7 @@ body {
   margin: 0 0 20px;
 }
 
-video {
+video, .block img {
   max-width: 100%;
   border-radius: 8px;
   border: 1px solid var(--line);
