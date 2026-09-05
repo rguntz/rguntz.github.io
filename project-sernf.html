@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SERNF — Romain Guntz</title>
+<meta name="description" content="Sample-Efficient Dexterous Policy Fine-Tuning via Normalizing Flows — Soft Robotics Lab, ETH Zürich.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero hero-sub">
+    <div class="hero-text">
+      <a class="back-link" href="index.html">← Romain Guntz</a>
+      <h1>Sample-Efficient Dexterous Policy Fine-Tuning via Normalizing Flows</h1>
+      <p class="detail-meta">Soft Robotics Lab, ETH Zürich</p>
+      <p class="detail-date">2026 – Present</p>
+    </div>
+  </header>
+
+  <section class="block">
+    <p>Dexterous manipulation has seen significant progress through sample-efficient reinforcement learning methods like RLPD and SERL. These approaches fuse expert demonstrations with online exploration data into a shared replay buffer, which is then used to train an offline RL algorithm such as SAC or TD3.</p>
+    <p>While these methods train policies from scratch, our goal is different: fine-tuning an existing behavior-cloning policy. State-of-the-art behavior-cloning policies like diffusion and flow-matching models are expressive but face challenges in RL fine-tuning due to unstable backpropagation and the lack of an exact log-likelihood, which is essential for likelihood regularization.</p>
+    <p>The SERNF framework<sup><a href="#ref1" id="ref1-src">[1]</a></sup> addresses this using normalizing flow policies, which provide multimodal predictions, exact log-likelihoods, and stable backpropagation. Their invertible architecture enables conservative policy updates during RL fine-tuning.</p>
+    <p>My role involved two key contributions. First, I replaced the coupling layers in SERNF with autoregressive flows, a model class originally developed for image generation. This change improved expressivity and convergence, yielding a ten percent performance gain on the Square task compared to the original coupling-layer architecture.</p>
+    <p>Second, I evaluated several vision backbones including DINO, R3M, and JEPA, and also studied the effect of fine-tuning DINO. Our results showed that DINO consistently outperformed the other backbones, and that fine-tuning it further boosted performance.</p>
+    <p>Experiments were conducted both on the Robomimic simulation benchmark and on two real Franka Panda arms equipped with ORCA hands, demonstrating that our contributions generalize beyond simulation to challenging real-world dexterous manipulation tasks.</p>
+    <p>This work was done at the Soft Robotics Lab at ETH Zürich under the supervision of Chenyu Yang and Denis Tarasov, and built upon their SERNF paper.</p>
+
+    <video controls playsinline>
+      <source src="assets/videos/sernf_demo_1.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">Bimanual dexterous manipulation teleoperation, real Franka Panda arms with ORCA hands.</p>
+
+    <video controls playsinline>
+      <source src="assets/videos/sernf_demo_2.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">Bimanual dexterous manipulation teleoperation, real Franka Panda arms with ORCA hands.</p>
+
+    <ol class="references">
+      <li id="ref1">Yang, C., Tarasov, D., Liconti, D., Guntz, R., Zheng, H., & Katzschmann, R. K. (2026). SERNF: Sample-Efficient Real-World Dexterous Policy Fine-Tuning via Action-Chunked Critics and Normalizing Flows. <a href="https://arxiv.org/abs/2602.09580" target="_blank" rel="noopener">arXiv:2602.09580</a>. <a class="back-ref" href="#ref1-src">↩</a></li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Romain Guntz — <a href="mailto:rguntz@student.ethz.ch">rguntz@student.ethz.ch</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

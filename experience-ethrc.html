@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETH Robotics Club — Romain Guntz</title>
+<meta name="description" content="AI Research Engineer on the ETHRC humanoid project — loco-manipulation with VLA, VLN, and NVIDIA's Whole-Body Controller.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero hero-sub">
+    <div class="hero-text">
+      <a class="back-link" href="index.html">← Romain Guntz</a>
+      <h1>ETH Robotics Club — AI Research Engineer</h1>
+      <p class="detail-date">Apr 2026 – Present</p>
+    </div>
+  </header>
+
+  <section class="block">
+    <p>I'm an AI Engineer on the ETHRC humanoid project, where the goal is to enable a humanoid robot to interpret and execute high-level instructions — for example, picking up a box from one corner of a room and placing it on a shelf at the opposite end.</p>
+    <p>My role is to integrate Vision-Language-Action (VLA) and Vision-Language Navigation (VLN) models into a single loco-manipulation pipeline built on NVIDIA's Whole-Body Controller, bringing together state-of-the-art robotic foundation models with vision-language navigation research.</p>
+
+    <video controls playsinline>
+      <source src="assets/videos/g1_teleoperation.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">G1 humanoid teleoperation.</p>
+
+    <h3>Current contribution</h3>
+    <p>I'm building on NVIDIA's <a href="https://github.com/NVlabs/GR00T-WholeBodyControl" target="_blank" rel="noopener">GR00T-WholeBodyControl</a> repository, which provides VR-based whole-body teleoperation in Isaac Lab simulation, but only a handful of loco-manipulation environments with fairly simplistic tasks.</p>
+    <p>My contribution has been to add richer RoboCasa environments to the repository, and to collect a 150-episode dataset of humanoid loco-manipulation trajectories in these environments. I've also fine-tuned the GR00T model on this data and am currently waiting to evaluate it.</p>
+
+    <video controls playsinline>
+      <source src="assets/videos/gr00t_episode_000000.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">One trajectory from the 150-episode dataset, collected in RoboCasa environments. Task: "Turn right, move in front of the water bottle on the counter in front of the fridge, pick up the water bottle, then turn left, walk to the sink, and place the water bottle into the sink."</p>
+  </section>
+
+  <footer>
+    <p>Romain Guntz — <a href="mailto:rguntz@student.ethz.ch">rguntz@student.ethz.ch</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

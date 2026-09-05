@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaussian Splats for RL Navigation — Romain Guntz</title>
+<meta name="description" content="Boosting RL Navigation through Gaussian Splats — RSL Lab, ETH Zürich.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero hero-sub">
+    <div class="hero-text">
+      <a class="back-link" href="index.html">← Romain Guntz</a>
+      <h1>Boosting RL Navigation through Gaussian Splats</h1>
+      <p class="detail-meta">RSL Lab, ETH Zürich</p>
+      <p class="detail-date">2025</p>
+    </div>
+  </header>
+
+  <section class="block">
+    <p><em>Abstract</em> — This project investigates methods for accelerating Gaussian Splatting, the rendering technique employed in the gsplat library, to enable RGB rendering of real-world 3D environments for reinforcement learning (RL) applications. Sorting was identified as the primary computational bottleneck. Although caching the results of the sorting step can yield up to a 9.7% speedup, the overhead introduced by the current RadixSort implementation offsets this gain, ultimately slowing down the process. In contrast, soft and hard pruning methods deliver a consistent 23% speedup with minimal quality degradation and are relatively simple to implement. Since pruning can be combined with other acceleration techniques, it offers promising potential for performance improvement. However, the current level of speedup is still insufficient for practical RL workloads. Achieving substantial performance gains will likely require a redesign of the gsplat system to support efficient caching. Further research is needed to explore and realize these improvements.</p>
+    <p><a href="assets/Gaussian_Splats_Report.pdf" target="_blank" rel="noopener">Report (PDF)</a></p>
+  </section>
+
+  <footer>
+    <p>Romain Guntz — <a href="mailto:rguntz@student.ethz.ch">rguntz@student.ethz.ch</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

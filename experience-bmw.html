@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMW — Romain Guntz</title>
+<meta name="description" content="Robotics Research Engineer internship at BMW — reinforcement learning fine-tuning of VLA models for dexterous assembly tasks.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero hero-sub">
+    <div class="hero-text">
+      <a class="back-link" href="index.html">← Romain Guntz</a>
+      <h1>BMW — Robotics Research Engineer (Internship)</h1>
+      <p class="detail-date">Sep 2025 – Mar 2026</p>
+    </div>
+  </header>
+
+  <section class="block">
+    <p>At BMW, I work on Vision–Language–Action (VLA) models — intelligent systems that leverage visual input and natural language instructions to predict robotic actions.</p>
+    <p>My focus is on applying reinforcement learning to fine-tune these models for specific assembly tasks, building on the generalized knowledge of large pre-trained models. More specifically, I use demonstration-guided reinforcement learning via the SERL method<sup><a href="#ref1" id="ref1-src">[1]</a></sup> to enable rapid skill acquisition through online learning.</p>
+    <p>The project focuses on dexterous manipulation for assembly tasks. The approach builds on ideas introduced in "Imitation Bootstrapped Reinforcement Learning" by Hengyuan Hu et al.: it begins by learning a policy from expert demonstrations, which is then reused as a guiding prior to improve exploration efficiency and learning stability during reinforcement learning, in parallel with directly incorporating demonstrations into the RL pipeline.</p>
+    <p>Using this approach, the policy learned the assembly task in about one hour of real-world practice — with real-world rollouts and improvement, and without relying on simulation.</p>
+
+    <video controls playsinline>
+      <source src="assets/videos/bmw_assembly_demo.mp4" type="video/mp4">
+    </video>
+    <p class="video-caption">Learned assembly policy, deployed on the real robot.</p>
+
+    <ol class="references">
+      <li id="ref1">Luo, J., Hu, Z., Xu, C., Tan, Y. L., Berg, J., Sharma, A., ... & Levine, S. (2024, May). SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning. In 2024 IEEE International Conference on Robotics and Automation (ICRA) (pp. 16961–16969). IEEE. <a class="back-ref" href="#ref1-src">↩</a></li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Romain Guntz — <a href="mailto:rguntz@student.ethz.ch">rguntz@student.ethz.ch</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

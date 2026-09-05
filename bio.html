@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bio — Romain Guntz</title>
+<meta name="description" content="Romain Guntz — my journey, from Brussels to EPFL, Dublin, ETH Zürich, BMW Munich, and Oxford.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero hero-sub">
+    <div class="hero-text">
+      <a class="back-link" href="index.html">← Romain Guntz</a>
+      <h1>Journey</h1>
+    </div>
+  </header>
+
+  <section class="block">
+    <div class="journey">
+      <div class="journey-item">
+        <h3>Brussels — early education</h3>
+        <p>I was born and raised in Brussels, where I completed my schooling, including high school, at École Notre-Dame des Champs.</p>
+      </div>
+      <div class="journey-item">
+        <h3>Lausanne — B.Sc. Mechanical Engineering, EPFL</h3>
+        <p>At 18, I was accepted to both ULB (Université Libre de Bruxelles) and EPFL (École Polytechnique Fédérale de Lausanne). I chose to move to Lausanne for a Bachelor's in Mechanical Engineering, where I built a foundation in solid and fluid mechanics, thermodynamics, general physics, materials science, mechanical design, algebra and analysis, information theory, and programming (C, Python, MATLAB).</p>
+      </div>
+      <div class="journey-item">
+        <h3>Dublin — Erasmus at UCD</h3>
+        <p>In my third year, I went on Erasmus exchange to University College Dublin. The decision was driven by a wish to broaden my academic horizons and meet new people — one I don't regret, for the memories and the people I met there.</p>
+      </div>
+      <div class="journey-item">
+        <h3>Zürich — M.Sc. Robotics, Systems and Control, ETH Zürich</h3>
+        <p>I moved to Zürich for my Master's in Robotics, Systems and Control. Beyond building a solid foundation in robotic systems — control and kinematics — I developed a strong background in machine learning: probabilistic AI (Bayesian learning, Gaussian processes, Markov decision processes), deep learning (imitation learning, reinforcement learning), model architectures (autoregressive networks, LSTMs, diffusion and flow-matching policies, normalizing flows), and computer vision (SfM, COLMAP, SLAM, 3D Gaussian splatting).</p>
+      </div>
+      <div class="journey-item">
+        <h3>Munich — Internship at BMW</h3>
+        <p>During my second year of Master's, I interned at BMW in Munich, working on improving imitation-learning foundation models (such as π0) with sample-efficient, real-world reinforcement learning. I was supervised by Michael Gentner and worked alongside a hardworking, inspiring team — and met one of the best interns I've come across.</p>
+      </div>
+      <div class="journey-item">
+        <h3>Oxford — Master's Thesis, Applied AI Lab</h3>
+        <p>For my thesis, I joined the Applied Artificial Intelligence Lab at Oxford, led by Prof. Ingmar Posner, under the supervision of Joe Watson (Oxford) and Denis Tarasov (ETH Zürich), with Prof. Dr. Robert Katzschmann and Prof. Ingmar Posner as thesis supervisors across ETH Zürich and Oxford.</p>
+        <p>My thesis studies flow-based policies — specifically MeanFlow<sup>[1]</sup> — for robotic tasks. Its single-step denoising process enables efficient backpropagation, unlike flow-matching or diffusion policies, which we exploit to fine-tune an initial behavior-cloning (BC) policy with sample-efficient reinforcement learning<sup>[2]</sup>, regularized via KL divergence. The project also makes the policy stationary<sup>[3]</sup>: out-of-distribution states yield uniform actions rather than the confidently hallucinated actions typical of BC policies. This avoids reinforcing bad BC behavior out of distribution and enables better RL exploration in unvisited states.</p>
+        <p class="citation">[1] Geng, Z., Deng, M., Bai, X., Kolter, Z., & He, K. (2026). Mean flows for one-step generative modeling. Advances in Neural Information Processing Systems, 38, 75460–75482.</p>
+        <p class="citation">[2] Ball, P. J., Smith, L., Kostrikov, I., & Levine, S. (2023, July). Efficient online reinforcement learning with offline data. In International Conference on Machine Learning (pp. 1577–1594). PMLR.</p>
+        <p class="citation">[3] Watson, J., Huang, S., & Heess, N. (2023). Coherent soft imitation learning. Advances in Neural Information Processing Systems, 36, 14540–14583.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Romain Guntz — <a href="mailto:rguntz@student.ethz.ch">rguntz@student.ethz.ch</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
