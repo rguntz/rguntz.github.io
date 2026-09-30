@@ -20,6 +20,10 @@
 
 * { box-sizing: border-box; }
 
+html {
+  font-size: 18px;
+}
+
 html, body {
   margin: 0;
   background: var(--bg);
@@ -29,13 +33,13 @@ html, body {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .wrap {
-  max-width: 700px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 64px 24px 48px;
+  padding: 64px clamp(20px, 3vw, 48px) 48px;
 }
 
 .hero {
@@ -56,7 +60,7 @@ body {
 
 .hero-text h1 {
   margin: 0 0 6px;
-  font-size: 1.7rem;
+  font-size: 2.3rem;
   letter-spacing: -0.02em;
 }
 
@@ -105,7 +109,7 @@ body {
 
 .hero-sub h1 {
   margin: 0 0 6px;
-  font-size: 1.6rem;
+  font-size: 2.1rem;
   letter-spacing: -0.02em;
 }
 
@@ -142,10 +146,11 @@ video, .block img {
 }
 
 .infoblock {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px 24px;
-  padding: 20px 22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px 48px;
+  padding: 28px 32px;
   margin-bottom: 44px;
   background: var(--tag-bg);
   border-radius: 10px;
@@ -155,18 +160,20 @@ video, .block img {
 .infoblock > div {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 6px;
 }
 
 .infoblock .k {
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
 }
 
 .infoblock .v {
-  font-size: 0.94rem;
+  white-space: nowrap;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .block {
@@ -178,7 +185,7 @@ video, .block img {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  font-size: 1.02rem;
+  font-size: 1.45rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin: 0 0 18px;
@@ -189,7 +196,7 @@ video, .block img {
 .block h2 .num {
   color: var(--accent);
   font-variant-numeric: tabular-nums;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
 }
 
 .block p {
@@ -199,7 +206,7 @@ video, .block img {
 
 .block h3 {
   margin: 32px 0 12px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -231,6 +238,7 @@ video, .block img {
 
 .entry-title {
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .entry-date {
@@ -346,7 +354,7 @@ video, .block img {
 
 .journey-item h3 {
   margin: 0 0 8px;
-  font-size: 0.96rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -407,6 +415,9 @@ footer a {
     gap: 18px;
   }
   .infoblock {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .infoblock .v {
+    white-space: normal;
   }
 }
