@@ -130,13 +130,14 @@ video, .block img {
   border-radius: 8px;
   border: 1px solid var(--line);
   display: block;
-  margin: 22px 0;
+  margin: 22px auto;
 }
 
 .video-caption {
   color: var(--muted);
   font-size: 0.82rem;
   margin: -14px 0 22px;
+  text-align: center;
 }
 
 .citation {
